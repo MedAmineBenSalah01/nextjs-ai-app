@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt';
 export async function POST(request) {
   try {
     const data = await request.json();
-    const hashedPassword = await bcrypt.hash(data.password,10);
+    const hashedPassword = await bcrypt.hash(data.password,"shhh;)");
     const newUser = await db.users.create({
         data:{
             email:data.email,
